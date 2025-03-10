@@ -402,18 +402,22 @@
             <h2>Get Started Today</h2>
             <p>Schedule a demo to see how Aaraadhya can transform your temple</p>
             <div class="contact-form">
-                <form>
+                <form id="templeForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Temple Name" required>
+                        <input type="text" id="templeName" placeholder="Temple Name">
+                        <small class="error" id="templeNameError"></small>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" id="email" placeholder="Email Address">
+                        <small class="error" id="emailError"></small>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <small class="error" id="phoneError"></small>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Tell us about your temple" rows="4"></textarea>
+                        <textarea id="message" placeholder="Tell us about your temple" rows="4"></textarea>
+                        <small class="error" id="messageError"></small>
                     </div>
                     <button type="submit" class="btn btn-primary">Request Demo</button>
                 </form>
@@ -448,6 +452,7 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
