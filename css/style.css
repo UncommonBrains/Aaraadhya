@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -233,7 +234,7 @@ header.scrolled {
     height: 100%;
     /* background-image: url('/api/placeholder/1200/800'); */
     /* background-image: url('/Aaraadhya LP/background\ 1.jpg'); */
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.822) 40%, rgba(255, 255, 255, 0.548) 70%, rgba(255, 255, 255, 0) 100%), url('/Aaraadhya LP/background 1.jpg');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.822) 40%, rgba(255, 255, 255, 0.548) 70%, rgba(255, 255, 255, 0) 100%), url('/assets/images/background 1.jpg');
     background-size: cover;
     background-position: center;
     /* opacity: 0.1; */
@@ -743,6 +744,7 @@ header.scrolled {
 .contact-form textarea {
   width: 100%;
   padding: 10px;
+  margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
