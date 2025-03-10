@@ -802,17 +802,26 @@ footer {
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr; /* Three equal columns */
     gap: 3rem;
     margin-bottom: 3rem;
+    align-items: start;
+}
+
+/* Footer Logo & Quick Links */
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-logo {
-    color: var(--white);
+    color: var(--primary);
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 1rem;
     display: block;
+    text-decoration: none;
+
 }
 
 .footer-text {
@@ -820,37 +829,15 @@ footer {
     opacity: 0.8;
 }
 
-.footer-social {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background-color: var(--primary);
-    transform: translateY(-3px);
+.footer-links ul {
+    list-style: none;
+    margin-top: 1rem;
 }
 
 .footer-links h3 {
     color: var(--white);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-size: 1.25rem;
-}
-
-.footer-links ul {
-    list-style: none;
 }
 
 .footer-links li {
@@ -869,19 +856,95 @@ footer {
     opacity: 1;
 }
 
-.footer-contact li {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    align-items: flex-start;
+/* Center Column - Legal Links */
+.footer-legal {
+    text-align: center;
 }
+
+.footer-legal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-legal li {
+    margin-bottom: 0.8rem;
+}
+
+/* Right Column - Social Links & Contact */
 
 .contact-icon {
     color: var(--primary);
     font-size: 1.2rem;
-    margin-top: 0.2rem;
+    margin-right: 0.5rem;
+}
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Adds spacing between icon and text */
 }
 
+.footer-contact a {
+    font-weight: bold; /* Makes the font bold */
+    color: black !important; /* Ensures the text color is black */
+    text-decoration: none !important; /* Removes underline */
+    font-size: 1rem; /* Adjusts font size */
+}
+
+.footer-contact a:hover {
+    color: var(--primary) !important; /* Changes color on hover (Optional) */
+}
+
+
+.footer-right {
+    text-align: right;
+
+}
+
+.footer-contact p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.footer-right a {
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-right a:hover {
+    color: var(--primary);
+    opacity: 1;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary);
+    color: white !important; /* Ensures icon turns white */
+
+    transform: translateY(-3px);
+}
+
+/* Copyright */
 .copyright {
     text-align: center;
     padding-top: 2rem;
