@@ -9,6 +9,7 @@ document.getElementById("templeForm").addEventListener("submit", function (event
     var phone = document.getElementById("phone").value.trim();
     var message = document.getElementById("message").value.trim();
     var submitButton = document.getElementById("submitButton");
+    var confirmationMessage = document.getElementById("confirmationMessage");
 
     var isValid = true;
 
@@ -54,10 +55,16 @@ document.getElementById("templeForm").addEventListener("submit", function (event
         body: JSON.stringify(formData)
     }).then(response => response.text())
         .then(data => {
-            alert("Form Submitted Successfully!");
-            document.getElementById("templeForm").reset(); // Clear form after submission
+            confirmationMessage.innerText = "Your request has been submitted! our team will get back to you as soon as possible.";
+            confirmationMessage.style.color = "green";
+            confirmationMessage.style.marginTop = "10px";
+            document.getElementById("templeForm").reset();
         })
-        .catch(error => alert("Error submitting form.")).finally(() => {
+        .catch(error => {
+            confirmationMessage.innerText = "Something went wrong, please try again.";
+            confirmationMessage.style.color = "red";
+            confirmationMessage.style.marginTop = "10px";
+        }).finally(() => {
             submitButton.disabled = false;
             submitButton.textContent = "Request Demo";
         });
