@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Aaraadhya - Seamless Access to Temples" />
-    <meta property="og:description" content="Connecting Tradition with Technology. Explore temple services and offerings easily with Aaraadhya." />
+    <meta property="og:description"
+        content="Connecting Tradition with Technology. Explore temple services and offerings easily with Aaraadhya." />
     <meta property="og:image" content="assets/images/aaraadhya_logo.png">
     <meta property="og:url" content="https://aaraadhya.in" />
     <meta property="og:type" content="website" />
@@ -410,20 +411,24 @@
             <h2>Get Started Today</h2>
             <p>Schedule a demo to see how Aaraadhya can transform your temple</p>
             <div class="contact-form">
-                <form>
+                <form id="templeForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Temple Name" required>
+                        <input type="text" id="templeName" placeholder="Temple Name">
+                        <small class="error" id="templeNameError"></small>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" id="email" placeholder="Email Address">
+                        <small class="error" id="emailError"></small>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <small class="error" id="phoneError"></small>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Tell us about your temple" rows="4"></textarea>
+                        <textarea id="message" placeholder="Tell us about your temple" rows="4"></textarea>
+                        <small class="error" id="messageError"></small>
                     </div>
-                    <button type="submit" class="btn btn-primary">Request Demo</button>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Request Demo</button>
                 </form>
             </div>
         </div>
@@ -444,7 +449,7 @@
                         </ul>
                     </div>
                 </div>
-    
+
                 <!-- Center Column: Legal Links -->
                 <!-- <div class="footer-legal">
                     <h3>Legal</h3>
@@ -454,7 +459,7 @@
                         <li><a href="disclaimer.html">Disclaimer</a></li>
                     </ul>
                 </div> -->
-    
+
                 <!-- Right Column: Contact & Social Links -->
                 <div class="footer-right">
                     <h3>Contact</h3>
@@ -464,27 +469,31 @@
                     </p>
                     <p>
                         <i class="fas fa-map-marker-alt contact-icon"></i>
-                        Uncommon Brains Private Limited, Kayamkulam <p> Alappuzha, Kerala - 690502</p> 
+                        Uncommon Brains Private Limited, Kayamkulam <p> Alappuzha, Kerala - 690502</p>
                     </p>
                     <div class="footer-social">
                         <a href="https://wa.me/919400446095" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/aaraadhyaonline" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/aaraadhyaonline" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/@Aaraadhya-Online" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/aaraadhyaonline" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/aaraadhyaonline" class="social-icon"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@Aaraadhya-Online" class="social-icon"><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-    
+
             <div class="copyright">
                 <p>&copy; 2025 Aaraadhya. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    
-    
+
+
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
