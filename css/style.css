@@ -801,11 +801,13 @@ footer {
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Three equal columns */
-    gap: 3rem;
-    margin-bottom: 3rem;
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Footer Logo & Quick Links */
@@ -877,27 +879,28 @@ footer {
     font-size: 1.2rem;
     margin-right: 0.5rem;
 }
+
 .footer-contact p {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Adds spacing between icon and text */
+    gap: 0.5rem;
+    /* Adds spacing between icon and text */
 }
 
 .footer-contact a {
-    font-weight: bold; /* Makes the font bold */
-    color: black !important; /* Ensures the text color is black */
-    text-decoration: none !important; /* Removes underline */
-    font-size: 1rem; /* Adjusts font size */
+    font-weight: bold;
+    /* Makes the font bold */
+    color: black !important;
+    /* Ensures the text color is black */
+    text-decoration: none !important;
+    /* Removes underline */
+    font-size: 1rem;
+    /* Adjusts font size */
 }
 
 .footer-contact a:hover {
-    color: var(--primary) !important; /* Changes color on hover (Optional) */
-}
-
-
-.footer-right {
-    text-align: right;
-
+    color: var(--primary) !important;
+    /* Changes color on hover (Optional) */
 }
 
 .footer-contact p {
@@ -919,7 +922,6 @@ footer {
 
 .footer-social {
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
 }
 
@@ -939,7 +941,8 @@ footer {
 
 .social-icon:hover {
     background-color: var(--primary);
-    color: white !important; /* Ensures icon turns white */
+    color: white !important;
+    /* Ensures icon turns white */
 
     transform: translateY(-3px);
 }
@@ -948,6 +951,7 @@ footer {
 .copyright {
     text-align: center;
     padding-top: 2rem;
+    margin-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0.7;
     font-size: 0.9rem;
