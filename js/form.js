@@ -46,13 +46,13 @@ document.getElementById("templeForm").addEventListener("submit", function (event
     submitButton.disabled = true;
     submitButton.textContent = "Submitting...";
 
-    fetch("https://submitform-q2t4p73rbq-uc.a.run.app", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        }).then(response => response.text())
+    fetch("https://sheetsproxy-q2t4p73rbq-uc.a.run.app", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    }).then(response => response.text())
         .then(data => {
             alert("Form Submitted Successfully!");
             document.getElementById("templeForm").reset(); // Clear form after submission
