@@ -8,6 +8,7 @@ document.getElementById("templeForm").addEventListener("submit", function (event
     var email = document.getElementById("email").value.trim();
     var phone = document.getElementById("phone").value.trim();
     var message = document.getElementById("message").value.trim();
+    var submitButton = document.getElementById("submitButton");
 
     var isValid = true;
 
@@ -42,7 +43,10 @@ document.getElementById("templeForm").addEventListener("submit", function (event
         message
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbwNWbDSx4dC8qvXNPv7dtOR9VjmoOh7qK3Bx-vVDE43wg_hI8yu17psmmuiN6kFuV9iFA/exec", {
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+
+    fetch("https://submitform-q2t4p73rbq-uc.a.run.app", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -53,5 +57,8 @@ document.getElementById("templeForm").addEventListener("submit", function (event
             alert("Form Submitted Successfully!");
             document.getElementById("templeForm").reset(); // Clear form after submission
         })
-        .catch(error => alert("Error submitting form."));
+        .catch(error => alert("Error submitting form.")).finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = "Request Demo";
+        });
 });
