@@ -47,10 +47,11 @@ document.getElementById("templeForm").addEventListener("submit", function (event
     submitButton.disabled = true;
     submitButton.textContent = "Submitting...";
 
-    fetch("https://sheetsproxy-q2t4p73rbq-uc.a.run.app", {
+    fetch("https://forwardrequest-q2t4p73rbq-uc.a.run.app", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "x-redirect-url": "https://script.google.com/macros/s/AKfycbxddlnvNUd_9fQ2LePgYin4XVyWoUnDS-H3zT7R0MtTHNp6aip7iiB4W8aJDq8Eo3jT_Q/exec"
         },
         body: JSON.stringify(formData)
     }).then(response => response.text())
