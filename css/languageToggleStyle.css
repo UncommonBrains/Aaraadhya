@@ -1,0 +1,59 @@
+.lang-btn {
+  width: 3rem;
+  background: none;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.lang-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Make containers more flexible for longer text */
+.lang-ml .feature-card,
+.lang-ml .benefit-item,
+.lang-ml .accordion-item {
+  min-height: fit-content;
+  height: auto;
+}
+
+
+
+/* Malayalam-specific font styles */
+body.lang-ml {
+  /* Add a Malayalam-friendly font stack */
+  font-family: 'Manjari', 'Noto Sans Malayalam', 'Poppins', sans-serif;
+}
+
+/* Adjust spacing for Malayalam text which may need more height */
+.lang-ml h1, .lang-ml h2, .lang-ml h3 {
+  line-height: 1.6;
+}
+
+/* Adjust button sizing for Malayalam which may have longer words */
+.lang-ml .btn {
+  padding: 10px 20px;
+  min-width: 120px; /* Ensure buttons have enough space */
+}
+
+/* Adjust navigation for Malayalam */
+.lang-ml .nav-links a {
+  padding: 8px 12px;
+  font-size: 0.95em; /* Slightly smaller to fit longer words */
+}
+
+
+/* Additional responsive adjustments for Malayalam */
+@media (max-width: 768px) {
+  .lang-ml .hero h1 {
+    font-size: 1.8em; /* Smaller font on mobile for Malayalam */
+  }
+  
+  .lang-ml .nav-links li {
+    margin: 0 5px; /* Tighter spacing in nav for Malayalam */
+  }
+}

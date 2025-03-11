@@ -18,10 +18,16 @@
 
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/languageToggleStyle.css">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Add this to your <head> section in index.html -->
+    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -34,16 +40,20 @@
                     <!-- <i class="fas fa-om logo-icon"></i> -->
                     <img src="assets/images/aaraadhya_logo.png" alt="Aaraadhya Logo"
                         class="logo-icon fas fa-om logo-icon">
-
-                    Aaraadhya just trying new things
+                    Aaraadhya
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact" class="btn btn-primary">Get Started</a></li>
+                    <li><a href="#features" data-lang="features">Features</a></li>
+                    <li><a href="#benefits" data-lang="benefits">Benefits</a></li>
+                    <li><a href="#how-it-works" data-lang="how-it-works">How It Works</a></li>
+                    <li><a href="#faq" data-lang="faq">FAQ</a></li>
+                    <li><a href="#contact" class="btn btn-primary" data-lang="get-started">Get Started</a></li>
                 </ul>
+
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle" class="lang-btn">EN</button>
+
+
                 <div class="hamburger">
                     <div></div>
                     <div></div>
@@ -58,12 +68,12 @@
         <div class="container">
             <div class="row" style="display: flex; flex-wrap: wrap;">
                 <div class="hero-content">
-                    <h1>Seamless access to Temple Services</h1>
-                    <p>Aaraadhya is a comprehensive digital platform designed to help temples manage their operations,
-                        services, and devotee engagement seamlessly.</p>
+                    <h1 data-lang="hero-title">Seamless access to Temple Services</h1>
+                    <p data-lang="hero-description">Aaraadhya is a comprehensive digital platform designed to help
+                        temples manage their operations, services, and devotee engagement seamlessly.</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Schedule Demo</a>
-                        <a href="#features" class="btn btn-outline">Explore Features</a>
+                        <a href="#contact" class="btn btn-primary" data-lang="schedule-demo">Schedule Demo</a>
+                        <a href="#features" class="btn btn-outline" data-lang="explore-features">Explore Features</a>
                     </div>
                 </div>
                 <!-- <div class="hero-image">
@@ -495,6 +505,10 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/languageToggle.js"></script>
+    <script src="js/translations.js"></script>
+
+
 </body>
 
 </html>
