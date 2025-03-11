@@ -35,3 +35,24 @@ accordionHeaders.forEach(header => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let popup = document.getElementById("popup-form");
+    let closeBtn = document.querySelector(".close-btn");
+    let hasPopupShown = false;
+    let initialScrollPos = window.scrollY; // Store initial scroll position
+
+    window.addEventListener("scroll", function () {
+        let currentScrollPos = window.scrollY;
+        let scrolledDistance = Math.abs(currentScrollPos - initialScrollPos); // Absolute distance from start
+
+        if (scrolledDistance > 600 && !hasPopupShown) {
+            popup.style.display = "block";
+            hasPopupShown = true; // Prevent reappearing after closing
+        }
+    });
+
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+});
