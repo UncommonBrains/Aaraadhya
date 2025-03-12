@@ -47,6 +47,23 @@ body.lang-ml {
 }
 
 
+.ml-content {
+  font-family: "Noto Sans Malayalam", sans-serif;
+  direction:ltr; /* If needed for better Malayalam text rendering */
+  color: #333; /* Adjust color if necessary */
+  font-size: 1em;
+}
+
+.lang-ml .hero-content h1 {
+  font-size: 2rem; /* Adjust size as needed */
+  line-height: 1.2; /* Improve readability */
+}
+
+
+
+
+
+
 /* Additional responsive adjustments for Malayalam */
 @media (max-width: 768px) {
   .lang-ml .hero h1 {

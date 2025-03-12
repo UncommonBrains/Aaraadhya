@@ -6,7 +6,7 @@ const translations = {
       "benefits": "Benefits",
       "how-it-works": "How It Works",
       "faq": "FAQ",
-      "get-started": "Get Started",
+      "get-started": "Onboard Your Temple",
       
       // Hero Section
       "hero-title": "Seamless access to Temple Services",
@@ -30,10 +30,10 @@ const translations = {
   },
   ml: {
       // Navigation
-      "features": "വിശേഷതകൾ",
-      "benefits": "ഗുണങ്ങൾ",
-      "how-it-works": "എങ്ങനെ പ്രവർത്തിക്കുന്നു",
-      "faq": "അടിക്കടി ചോദ്യങ്ങൾ",
+      "features": "ഫീച്ചറുകൾ",
+      "benefits": "ആനുകൂല്യങ്ങൾ",
+      "how-it-works": "എങ്ങനെ ചേരും",
+      "faq": "FAQs",
       "get-started": "ആരംഭിക്കുക",
       
       // Hero Section

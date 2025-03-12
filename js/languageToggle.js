@@ -9,9 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
       if (translations[currentLang][key]) {
         el.textContent = translations[currentLang][key];
       }
+  
+      // Add or remove class based on language
+      if (currentLang === "ml") {
+        el.classList.add("ml-content");
+      } else {
+        el.classList.remove("ml-content");
+      }
     });
-
+  
     langToggle.textContent = currentLang.toUpperCase(); // Update button text
+  
     // Add language class to body
     document.body.classList.remove("lang-en", "lang-ml");
     document.body.classList.add("lang-" + currentLang);
